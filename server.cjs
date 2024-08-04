@@ -21,5 +21,5 @@ app.get('/api/v1/employees', async(req, res, next) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Listening on port: ${PORT}`)
+  console.log(`Listening on port: ${PORT}..`)
 })

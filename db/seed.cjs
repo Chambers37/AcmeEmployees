@@ -29,34 +29,31 @@ const createTable = async() => {
 
 
 const syncAndSeed = async() => {
-  // connect
-  client.connect();
-  console.log('Connected');
 
+  // connect
+  client.connect(); 
 
   // drop table
-  await dropTables();
-  console.log('Tables Dropped');
+  await dropTables();  
 
   // create table
-  await createTable();
-  console.log('Table Created');
+  await createTable();  
 
   // create emyployees
-  await createEmployee('Bob1', false);
-  console.log('Employee 1 created')
-  await createEmployee('Bob2', true);
-  console.log('Employee 2 created')
-  await createEmployee('Bob3', false);
-  console.log('Employee 3 created')
-  await createEmployee('Bob4', false);
-  console.log('Employee 4 created')
-  await createEmployee('Bob5', true);
-  console.log('Employee 5 created')
+  await createEmployee('Bob Martin', false);
+  
+  await createEmployee('Mary Smith', true);
+  
+  await createEmployee('Amy Lynn', false);
+  
+  await createEmployee('Joe Shmoe', false);
+  
+  await createEmployee('Jessy James', true);
+  
 
   // disconnect
   client.end();
-  console.log('Disconnected')
+  
 }
 
 syncAndSeed();
